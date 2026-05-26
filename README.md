@@ -164,3 +164,12 @@ This repository demonstrates:
 ## Strategy Equity Curve
 
 ![Equity Curve](reports/equity_curve.png)
+
+
+## Performance
+
+| Metric | Value |
+|---|---:|
+| CAGR | -0.0084 |
+| Sharpe Ratio | 0.1085 |
+| Max Drawdown | -0.655 |

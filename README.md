@@ -160,3 +160,7 @@ This repository demonstrates:
 - Add portfolio-level position sizing
 - Add factor neutralization
 - Add Bayesian or nested hyperparameter search
+
+## Strategy Equity Curve
+
+![Equity Curve](reports/equity_curve.png)

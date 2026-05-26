@@ -46,6 +46,34 @@ quant-research-lab/
 ├── requirements.txt
 └── README.md
 ```
+## Research Hypothesis
+
+This project tests whether lagged price and volume features contain predictive information about short-term future return direction.
+
+The hypothesis is that recent returns, volatility, moving-average distance, breakout features, and volume changes may help predict whether the asset will move up, down, or remain flat over the next five trading days.
+
+## Strategy Design
+
+The strategy follows a simple machine-learning-based directional trading framework:
+
+1. Generate lagged price and volume features from OHLCV data.
+2. Label each date based on the 5-day forward return:
+   - `1` if the forward return is above `+0.2%`
+   - `-1` if the forward return is below `-0.2%`
+   - `0` otherwise
+3. Train a Random Forest classifier using walk-forward validation.
+4. Convert model predictions into trading positions:
+   - prediction `1` → long
+   - prediction `-1` → short
+   - prediction `0` → flat
+5. Shift positions by one day to avoid look-ahead bias.
+6. Evaluate the strategy after transaction costs.
+
+## Interpretation
+
+The current experiment did not produce robust positive performance. The strategy achieved a negative CAGR, a low Sharpe ratio, and a large maximum drawdown.
+
+This suggests that the current feature set and model are not sufficient to generate a stable trading strategy under the tested assumptions. Future improvements should include benchmark comparison, transaction cost sensitivity analysis, feature importance analysis, and testing on real market data.
 
 ## Research Question
 

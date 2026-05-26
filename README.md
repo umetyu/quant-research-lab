@@ -173,3 +173,9 @@ This repository demonstrates:
 | CAGR | -0.0084 |
 | Sharpe Ratio | 0.1085 |
 | Max Drawdown | -0.655 |
+
+## Interpretation
+
+The strategy did not generate robust positive returns in this experiment. Although the model produced trading signals through a walk-forward validation process, the final performance was weak, with a negative CAGR, low Sharpe ratio, and large maximum drawdown.
+
+This suggests that the current feature set and signal construction are not sufficient to produce a stable trading strategy. Further work should include benchmark comparison, transaction cost sensitivity analysis, feature importance analysis, and more robust risk control.
